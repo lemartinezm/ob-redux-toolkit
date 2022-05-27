@@ -1,17 +1,17 @@
 import { createAction } from "@reduxjs/toolkit";
 
-let nextTodoId = 0;
+let nextTaskId = 0;
 
-export const ADD_TODO = createAction('ADD_TODO', name => {
+export const ADD_TASK = createAction('ADD_TASK', name => {
   return {
     payload: {
       name,
-      id: nextTodoId++
+      id: nextTaskId++
     }
   }
 })
 
-export const TOGGLE_TODO = createAction('TOGGLE_TODO', (id) => {
+export const TOGGLE_TASK = createAction('TOGGLE_TASK', (id) => {
   return {
     payload: {
       id
